@@ -29,14 +29,19 @@ const styles = StyleSheet.create(
         },
         header:{
             backgroundColor:'pink',
-            padding:20
+            padding:20,
+            width:'100%',
+            height:'8%',
+            marginTop:'6%'
         },
         boldText:{
             fontWeight:'bold'
         },
         body:{
             backgroundColor:'yellow',
-            padding:20
+            padding:20,
+            width:'100%',
+            height:'90%'
 
         }
     }
