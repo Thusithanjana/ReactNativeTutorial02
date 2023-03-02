@@ -13,6 +13,21 @@ export default function StylesComponent(){
                 <Text>Lorem ipsum dolor sit amet</Text>
                 <Text>Lorem ipsum dolor sit amet</Text>
                 <Text>Lorem ipsum dolor sit amet</Text>
+                <View style= {styles.row}>
+                    <View style={styles.box}/>
+                    <View style={styles.box}/>
+                    <View style={styles.box}/>
+                </View>
+                <View style= {styles.row}>
+                    <View style={styles.box}/>
+                    <View style={styles.box}/>
+                    <View style={styles.box}/>
+                </View>
+                <View style= {styles.row}>
+                    <View style={styles.box}/>
+                    <View style={styles.box}/>
+                    <View style={styles.box}/>
+                </View>
 
             </View>
         </View>
@@ -43,6 +58,15 @@ const styles = StyleSheet.create(
             width:'100%',
             height:'90%'
 
+        },
+        row:{
+            flexDirection:'row'
+        },
+        box:{
+            height:100,
+            width:100,
+            backgroundColor:'red',
+            margin:10
         }
     }
 )
