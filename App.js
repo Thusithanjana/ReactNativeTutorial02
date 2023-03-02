@@ -1,14 +1,9 @@
-import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View,ScrollView } from 'react-native';
 import {useState, useEffect} from 'react';
 import ListComponent from './components/ListComponent';
 
-
 export default function App() {
-
   const [result, setResult] = useState(null)
-
- 
   useEffect(()=>{
     fetch('https://jsonplaceholder.typicode.com/photos')
     .then(response => response.json())
