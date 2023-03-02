@@ -1,6 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View,ScrollView } from 'react-native';
 import {useState, useEffect} from 'react';
+import ListComponent from './components/ListComponent';
 
 
 export default function App() {
@@ -9,7 +10,7 @@ export default function App() {
 
  
   useEffect(()=>{
-    fetch('https://jsonplaceholder.typicode.com/todos')
+    fetch('https://jsonplaceholder.typicode.com/photos')
     .then(response => response.json())
     .then(data => setResult(data))
     .catch(error => console.error(error))
@@ -18,9 +19,11 @@ export default function App() {
   
   return (
     <View style={styles.container}>
-      <ScrollView>
-        {result ? (
-        <Text>{JSON.stringify(result[0])}</Text>
+      <ScrollView>       
+        {result ?  (
+          result.slice(0,20).map((item,index)=>
+            (<ListComponent key={index} data={item}/>)            
+          )                  
       ) : (
         <Text>Loading data...</Text>
       )}
